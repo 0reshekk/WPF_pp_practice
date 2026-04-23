@@ -10,8 +10,18 @@
     Height="450"
     mc:Ignorable="d">
     <Grid>
-        <Button />
-        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" />
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+        <Button
+            x:Name="GoBackButton"
+            Grid.Row="0"
+            HorizontalAlignment="Right" />
+        <Frame
+            x:Name="MainFrame"
+            Grid.Row="1"
+            NavigationUIVisibility="Hidden" />
     </Grid>
 </Window>
