@@ -18,22 +18,29 @@
         </Grid.RowDefinitions>
 
         <!--  Фильтры  -->
-        <StackPanel x:Name="FiltersStackPanel" Orientation="Horizontal">
-            <TextBox
-                x:Name="SearchTextBox"
-                Width="250"
-                Margin="5"
-                TextChanged="Filter" />
-            <ComboBox
-                x:Name="SortComboBox"
-                Width="130"
-                Margin="5"
-                SelectionChanged="Filter" />
-            <ComboBox
-                x:Name="TypeComboBox"
-                Width="130"
-                Margin="5"
-                SelectionChanged="Filter" />
+
+        <!--  Используем как header, не более, просто чтобы сверстать  -->
+        <StackPanel Orientation="Horizontal">
+            <StackPanel x:Name="FiltersStackPanel" Orientation="Horizontal">
+                <TextBox
+                    x:Name="SearchTextBox"
+                    Width="250"
+                    Margin="5"
+                    TextChanged="Filter" />
+                <ComboBox
+                    x:Name="SortComboBox"
+                    Width="130"
+                    Margin="5"
+                    SelectedIndex="0"
+                    SelectionChanged="Filter" />
+                <ComboBox
+                    x:Name="TypeComboBox"
+                    Width="130"
+                    Margin="5"
+                    DisplayMemberPath="Name"
+                    SelectedIndex="0"
+                    SelectionChanged="Filter" />
+            </StackPanel>
             <Button
                 x:Name="MaterialsButton"
                 Width="100"
@@ -69,7 +76,11 @@
                                 </TextBlock.Text>
                             </TextBlock>
                             <TextBlock Text="{Binding Article}" />
-                            <TextBlock Text="{Binding StringMaterials}" />
+                            <TextBlock>
+                                <TextBlock.Text>
+                                    <Binding Path="StringMaterials" StringFormat="{}Материалы: {0}" />
+                                </TextBlock.Text>
+                            </TextBlock>
                         </StackPanel>
 
                         <TextBlock Grid.Column="2" Text="{Binding MinPrice}" />
@@ -86,19 +97,22 @@
             <Button
                 x:Name="AddButton"
                 Width="150"
-                Margin="5">
+                Margin="5"
+                Click="AddButton_Click">
                 Добавить
             </Button>
             <Button
                 x:Name="EditButton"
                 Width="150"
-                Margin="5">
+                Margin="5"
+                Click="EditButton_Click">
                 Изменить выбранное
             </Button>
             <Button
                 x:Name="DeleteButton"
                 Width="150"
-                Margin="5">
+                Margin="5"
+                Click="DeleteButton_Click">
                 Удалить выбранное
             </Button>
         </StackPanel>

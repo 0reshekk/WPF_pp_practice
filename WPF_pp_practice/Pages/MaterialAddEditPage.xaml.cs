@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace WPF_pp_practice.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainPage.xaml
+    /// Логика взаимодействия для MaterialAddEditPage.xaml
     /// </summary>
-    public partial class MainPage : Page
+    public partial class MaterialAddEditPage : Page
     {
-        public MainPage()
+        public MaterialAddEditPage()
         {
             InitializeComponent();
         }

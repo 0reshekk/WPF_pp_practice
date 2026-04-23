@@ -1,4 +1,4 @@
-﻿<Page x:Class="WPF_pp_practice.Pages.MainPage"
+﻿<Page x:Class="WPF_pp_practice.Pages.MaterialAddEditPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:WPF_pp_practice.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="MainPage">
+      Title="MaterialAddEditPage">
 
     <Grid>
         

@@ -1,0 +1,74 @@
+﻿<Page
+    x:Class="WPF_pp_practice.Pages.ProductAddEditPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:WPF_pp_practice.Pages"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="ProductAddEditPage"
+    d:DesignHeight="650"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
+
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Border
+            Width="200"
+            Height="200"
+            BorderBrush="Black"
+            BorderThickness="3">
+            <Image />
+        </Border>
+        <Button
+            x:Name="SelectPhotoButton"
+            Height="40"
+            Margin="10">
+            Выбрать изображение
+        </Button>
+
+        <TextBlock Width="200" HorizontalAlignment="Center">Наименование</TextBlock>
+        <TextBox
+            x:Name="NameTextBox"
+            Width="200"
+            Margin="0,0,0,10"
+            HorizontalAlignment="Center" />
+        <TextBlock Width="200" HorizontalAlignment="Center">Артикул</TextBlock>
+        <TextBox
+            x:Name="ArticleTextBox"
+            Width="200"
+            Margin="0,0,0,10"
+            HorizontalAlignment="Center" />
+        <TextBlock Width="200" HorizontalAlignment="Center">Минимальная цена</TextBlock>
+        <TextBox
+            x:Name="MinPriceTextBox"
+            Width="200"
+            Margin="0,0,0,10"
+            HorizontalAlignment="Center" />
+        <TextBlock Width="200" HorizontalAlignment="Center">Тип продукта</TextBlock>
+        <ComboBox
+            x:Name="ProductTypesComboBox"
+            Width="200"
+            Margin="0,0,0,10"
+            HorizontalAlignment="Center"
+            DisplayMemberPath="Name" />
+        <TextBlock Width="200" HorizontalAlignment="Center">Количество людей</TextBlock>
+        <TextBox
+            x:Name="QPeopleTextBox"
+            Width="200"
+            Margin="0,0,0,10"
+            HorizontalAlignment="Center" />
+        <TextBlock Width="200" HorizontalAlignment="Center">Номер цеха</TextBlock>
+        <TextBox
+            x:Name="CehTextBox"
+            Width="200"
+            Margin="0,0,0,10"
+            HorizontalAlignment="Center" />
+
+        <Button
+            x:Name="SaveButton"
+            Click="SaveButton_Click"
+            Height="40"
+            Margin="10">
+            Сохранить
+        </Button>
+    </StackPanel>
+</Page>

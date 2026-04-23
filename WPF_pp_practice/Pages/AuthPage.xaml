@@ -10,7 +10,7 @@
     d:DesignWidth="800"
     mc:Ignorable="d">
 
-    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="200">
         <TextBlock
             Grid.Row="0"
             HorizontalAlignment="Center"
@@ -25,30 +25,14 @@
         <Button
             x:Name="AuthButton"
             Grid.Row="4"
+            Margin="10"
             Click="AuthButton_Click"
-            Content="Войти в систему" />
+            Content="Войти" />
         <Button
             x:Name="AuthAsGuestButton"
             Grid.Row="5"
+            Margin="10"
             Click="AuthAsGuestButton_Click"
-            Content="Просмотреть продукцию" />
+            Content="Войти как гость" />
     </StackPanel>
-
-    <!--<Grid Margin="100">
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-        </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" Text="Логин" HorizontalAlignment="Center"/>
-        <TextBox Name="LogTextBox" Grid.Row="1"/>
-        <TextBlock Grid.Row="2" Text="Пароль" HorizontalAlignment="Center"/>
-        <TextBox Name="PassTextBox" Grid.Row="3"/>
-
-        <Button Grid.Row="4" Click="Button_Click" Content="Войти в систему" />
-        <Button Grid.Row="5" Content="Просмотреть продукцию" Click="Button_Click_1" />
-    </Grid>-->
 </Page>
