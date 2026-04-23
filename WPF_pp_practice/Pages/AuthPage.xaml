@@ -10,7 +10,29 @@
     d:DesignWidth="800"
     mc:Ignorable="d">
 
-    <Grid Margin="100">
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <TextBlock
+            Grid.Row="0"
+            HorizontalAlignment="Center"
+            Text="Логин" />
+        <TextBox Name="LogTextBox" Grid.Row="1" />
+        <TextBlock
+            Grid.Row="2"
+            HorizontalAlignment="Center"
+            Text="Пароль" />
+        <TextBox Name="PassTextBox" Grid.Row="3" />
+
+        <Button
+            Grid.Row="4"
+            Click="Button_Click"
+            Content="Войти в систему" />
+        <Button
+            Grid.Row="5"
+            Click="Button_Click_1"
+            Content="Просмотреть продукцию" />
+    </StackPanel>
+
+    <!--<Grid Margin="100">
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition />
@@ -26,5 +48,5 @@
 
         <Button Grid.Row="4" Click="Button_Click" Content="Войти в систему" />
         <Button Grid.Row="5" Content="Просмотреть продукцию" Click="Button_Click_1" />
-    </Grid>
+    </Grid>-->
 </Page>
