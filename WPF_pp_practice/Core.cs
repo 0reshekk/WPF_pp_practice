@@ -18,4 +18,25 @@ namespace WPF_pp_practice
             }
         }
     }
+
+    partial class Products
+    {
+        public string StringMaterials
+        {
+            get
+            {
+                var list = ProductsMaterials.Select(p => p.Materials.Name).ToList();
+                return string.Join(", ", list);
+            }
+        }
+
+        public string PhotoPath
+        {
+            get
+            {
+                var photo = Photo;
+                if (photo == null) photo = "picture.jpg";
+            }
+        }
+    }
 }

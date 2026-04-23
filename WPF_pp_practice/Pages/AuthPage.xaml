@@ -15,20 +15,22 @@
             Grid.Row="0"
             HorizontalAlignment="Center"
             Text="Логин" />
-        <TextBox Name="LogTextBox" Grid.Row="1" />
+        <TextBox Name="LoginTextBox" Grid.Row="1" />
         <TextBlock
             Grid.Row="2"
             HorizontalAlignment="Center"
             Text="Пароль" />
-        <TextBox Name="PassTextBox" Grid.Row="3" />
+        <PasswordBox Name="PasswordPasswordBox" Grid.Row="3" />
 
         <Button
+            x:Name="AuthButton"
             Grid.Row="4"
-            Click="Button_Click"
+            Click="AuthButton_Click"
             Content="Войти в систему" />
         <Button
+            x:Name="AuthAsGuestButton"
             Grid.Row="5"
-            Click="Button_Click_1"
+            Click="AuthAsGuestButton_Click"
             Content="Просмотреть продукцию" />
     </StackPanel>
 

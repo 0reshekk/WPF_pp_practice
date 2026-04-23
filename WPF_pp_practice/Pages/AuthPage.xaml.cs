@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPF_pp_practice.services;
 
 namespace WPF_pp_practice.Pages
 {
@@ -24,21 +25,43 @@ namespace WPF_pp_practice.Pages
         {
             InitializeComponent();
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void AuthAsGuestButton_Click(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrEmpty(LogTextBox.Text) || string.IsNullOrEmpty(PassTextBox.Text))
-            {
-                MessageBox.Show("Заполните все поля!");
-            }
-            else
-                NavigationService.Navigate(new MainPage());
-
+            NavigationService.Navigate(new ProductsPage(null));
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void AuthButton_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new ProductsPage());
+            var login = LoginTextBox.Text;
+            var password = PasswordPasswordBox.Password;
+
+            if (string.IsNullOrEmpty(login))
+            {
+                MessageHelper.ShowInfo("Пустой логин!");
+                return;
+            }
+            if (string.IsNullOrEmpty(password))
+            {
+                MessageHelper.ShowInfo("Пустой пароль!");
+                return;
+            }
+
+            var user = Core.Context.Users.AsNoTracking().FirstOrDefault(u => u.Login == login);
+            if (user == null)
+            {
+                MessageHelper.ShowInfo("Пользователь не найден!");
+                return;
+            }
+            if (user.Password != password)
+            {
+                MessageHelper.ShowInfo("Пароль не совпадает!");
+                return;
+            }
+            
+            MainWindow mainWindow = App.Current.MainWindow as MainWindow;
+            mainWindow.ChangeUsername(user.Name);
+
+            NavigationService.Navigate(new ProductsPage(user));
         }
     }
 }

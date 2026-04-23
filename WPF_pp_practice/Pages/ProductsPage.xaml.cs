@@ -20,7 +20,7 @@ namespace WPF_pp_practice.Pages
     /// </summary>
     public partial class ProductsPage : Page
     {
-        public ProductsPage()
+        public ProductsPage(Users user)
         {
             InitializeComponent();
         }

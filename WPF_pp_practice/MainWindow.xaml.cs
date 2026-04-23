@@ -30,7 +30,18 @@ namespace WPF_pp_practice
         private void GoBackButton_Click(object sender, RoutedEventArgs e)
         {
             if (MainFrame.CanGoBack)
-                {MainFrame.GoBack(); }
+            {
+                if(MainFrame.Content is ProductsPage)
+                {
+                    UsernameTextBlock.Text = "";
+                }
+                MainFrame.GoBack();
+            }
+        }
+
+        public void ChangeUsername(string username)
+        {
+            UsernameTextBlock.Text = username;
         }
     }
 }
