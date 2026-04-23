@@ -361,3 +361,21 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/WPF_pp_practice/Edinici.cs
+/WPF_pp_practice/Materials.cs
+/WPF_pp_practice/MaterialTypes.cs
+/WPF_pp_practice/Model1.Context.cs
+/WPF_pp_practice/Model1.Context.tt
+/WPF_pp_practice/Model1.cs
+/WPF_pp_practice/Model1.Designer.cs
+/WPF_pp_practice/Model1.edmx
+/WPF_pp_practice/Model1.edmx.diagram
+/WPF_pp_practice/Model1.tt
+/WPF_pp_practice/Products.cs
+/WPF_pp_practice/ProductsMaterials.cs
+/WPF_pp_practice/ProductTypes.cs
+/WPF_pp_practice/Roles.cs
+/WPF_pp_practice/sysdiagrams.cs
+/WPF_pp_practice/Type_Product.cs
+/WPF_pp_practice/Users.cs
+/WPF_pp_practice/App.config
