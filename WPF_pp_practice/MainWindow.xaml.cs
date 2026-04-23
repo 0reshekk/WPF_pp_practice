@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPF_pp_practice.Pages;
 
 namespace WPF_pp_practice
 {
@@ -23,6 +24,13 @@ namespace WPF_pp_practice
         public MainWindow()
         {
             InitializeComponent();
+            MainFrame.Navigate(new AuthPage());
+        }
+
+        private void GoBackButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (MainFrame.CanGoBack)
+                {MainFrame.GoBack(); }
         }
     }
 }

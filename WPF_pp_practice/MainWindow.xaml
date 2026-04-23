@@ -18,7 +18,12 @@
         <Button
             x:Name="GoBackButton"
             Grid.Row="0"
-            HorizontalAlignment="Right" />
+            Width="100"
+            Height="50"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Center"
+            Click="GoBackButton_Click"
+            Content="Назад" />
         <Frame
             x:Name="MainFrame"
             Grid.Row="1"
