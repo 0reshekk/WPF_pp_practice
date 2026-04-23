@@ -12,12 +12,14 @@
 
     <Grid>
         <TextBox
+            Name="LogTextBox"
             Width="120"
             Margin="0,174,0,0"
             HorizontalAlignment="Center"
             VerticalAlignment="Top"
             TextWrapping="Wrap" />
         <TextBox
+            Name="PassTextBox"
             Width="120"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
@@ -37,6 +39,7 @@
             Margin="0,248,0,0"
             HorizontalAlignment="Center"
             VerticalAlignment="Top"
+            Click="Button_Click"
             Content="Войти в систему" />
         <Button
             Margin="0,313,0,0"

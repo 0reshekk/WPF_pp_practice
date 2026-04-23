@@ -195,11 +195,74 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="images\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="docs\script.sql" />
+    <Resource Include="images\tire_0.jpg" />
+    <Resource Include="images\tire_1.jpg" />
+    <Resource Include="images\tire_10.jpg" />
+    <Resource Include="images\tire_11.jpg" />
+    <Resource Include="images\tire_12.jpg" />
+    <Resource Include="images\tire_13.jpg" />
+    <Resource Include="images\tire_14.jpg" />
+    <Resource Include="images\tire_15.jpg" />
+    <Resource Include="images\tire_16.jpg" />
+    <Resource Include="images\tire_17.jpg" />
+    <Resource Include="images\tire_18.jpg" />
+    <Resource Include="images\tire_19.jpg" />
+    <Resource Include="images\tire_2.jpg" />
+    <Resource Include="images\tire_20.jpg" />
+    <Resource Include="images\tire_21.jpg" />
+    <Resource Include="images\tire_22.jpg" />
+    <Resource Include="images\tire_23.jpg" />
+    <Resource Include="images\tire_24.jpg" />
+    <Resource Include="images\tire_25.jpg" />
+    <Resource Include="images\tire_26.jpg" />
+    <Resource Include="images\tire_27.jpg" />
+    <Resource Include="images\tire_28.jpg" />
+    <Resource Include="images\tire_29.jpg" />
+    <Resource Include="images\tire_3.jpg" />
+    <Resource Include="images\tire_30.jpg" />
+    <Resource Include="images\tire_31.jpg" />
+    <Resource Include="images\tire_32.jpg" />
+    <Resource Include="images\tire_33.jpg" />
+    <Resource Include="images\tire_34.jpg" />
+    <Resource Include="images\tire_35.jpg" />
+    <Resource Include="images\tire_36.jpg" />
+    <Resource Include="images\tire_37.jpg" />
+    <Resource Include="images\tire_38.jpg" />
+    <Resource Include="images\tire_39.jpg" />
+    <Resource Include="images\tire_4.jpg" />
+    <Resource Include="images\tire_40.jpg" />
+    <Resource Include="images\tire_41.jpg" />
+    <Resource Include="images\tire_42.jpg" />
+    <Resource Include="images\tire_43.jpg" />
+    <Resource Include="images\tire_44.jpg" />
+    <Resource Include="images\tire_45.jpg" />
+    <Resource Include="images\tire_46.jpg" />
+    <Resource Include="images\tire_47.jpg" />
+    <Resource Include="images\tire_48.jpg" />
+    <Resource Include="images\tire_49.jpg" />
+    <Resource Include="images\tire_5.jpg" />
+    <Resource Include="images\tire_50.jpg" />
+    <Resource Include="images\tire_51.jpg" />
+    <Resource Include="images\tire_52.jpg" />
+    <Resource Include="images\tire_53.jpg" />
+    <Resource Include="images\tire_54.jpg" />
+    <Resource Include="images\tire_55.jpg" />
+    <Resource Include="images\tire_56.jpg" />
+    <Resource Include="images\tire_57.jpg" />
+    <Resource Include="images\tire_58.jpg" />
+    <Resource Include="images\tire_59.jpg" />
+    <Resource Include="images\tire_6.jpg" />
+    <Resource Include="images\tire_60.jpg" />
+    <Resource Include="images\tire_61.jpg" />
+    <Resource Include="images\tire_62.jpg" />
+    <Resource Include="images\tire_63.jpg" />
+    <Resource Include="images\tire_64.jpg" />
+    <Resource Include="images\tire_7.jpg" />
+    <Resource Include="images\tire_8.jpg" />
+    <Resource Include="images\tire_9.jpg" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.Context.cs</LastGenOutput>

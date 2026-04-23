@@ -24,5 +24,16 @@ namespace WPF_pp_practice.Pages
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrEmpty(LogTextBox.Text) || string.IsNullOrEmpty(PassTextBox.Text))
+            {
+                MessageBox.Show("Заполните все поля!");
+            }
+            else
+                NavigationService(new MainPage());
+
+        }
     }
 }
