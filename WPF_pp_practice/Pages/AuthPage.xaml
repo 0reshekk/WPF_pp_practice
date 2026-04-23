@@ -10,41 +10,21 @@
     d:DesignWidth="800"
     mc:Ignorable="d">
 
-    <Grid>
-        <TextBox
-            Name="LogTextBox"
-            Width="120"
-            Margin="0,174,0,0"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Top"
-            TextWrapping="Wrap" />
-        <TextBox
-            Name="PassTextBox"
-            Width="120"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            TextWrapping="Wrap" />
-        <TextBlock
-            Margin="371,199,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Text="Пароль"
-            TextWrapping="Wrap" />
-        <TextBlock
-            Margin="371,155,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Text="Логин" />
-        <Button
-            Margin="0,248,0,0"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Top"
-            Click="Button_Click"
-            Content="Войти в систему" />
-        <Button
-            Margin="0,313,0,0"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Top"
-            Content="Просмотреть продукцию" />
+    <Grid Margin="100">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Text="Логин" HorizontalAlignment="Center"/>
+        <TextBox Name="LogTextBox" Grid.Row="1"/>
+        <TextBlock Grid.Row="2" Text="Пароль" HorizontalAlignment="Center"/>
+        <TextBox Name="PassTextBox" Grid.Row="3"/>
+
+        <Button Grid.Row="4" Click="Button_Click" Content="Войти в систему" />
+        <Button Grid.Row="5" Content="Просмотреть продукцию" Click="Button_Click_1" />
     </Grid>
 </Page>

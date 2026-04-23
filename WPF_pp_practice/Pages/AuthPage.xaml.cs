@@ -32,8 +32,13 @@ namespace WPF_pp_practice.Pages
                 MessageBox.Show("Заполните все поля!");
             }
             else
-                NavigationService(new MainPage());
+                NavigationService.Navigate(new MainPage());
 
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new ProductsPage());
         }
     }
 }
