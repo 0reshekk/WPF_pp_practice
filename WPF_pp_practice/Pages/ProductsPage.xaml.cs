@@ -23,6 +23,23 @@ namespace WPF_pp_practice.Pages
         public ProductsPage(Users user)
         {
             InitializeComponent();
+
+            ProductsListView.ItemsSource = Core.Context.Products.ToList();
+            
+
+        }
+
+        private void SetInterfaceVisibility(int roleID)
+        {
+
+        }
+
+        // Фильтр
+        public void Filter(object sender, EventArgs e)
+        {
+            if (ProductsListView is null) return;
+
+            var products = Core.Context.Products.ToList();
         }
     }
 }

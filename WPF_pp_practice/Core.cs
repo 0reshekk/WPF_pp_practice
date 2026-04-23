@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
@@ -34,8 +35,9 @@ namespace WPF_pp_practice
         {
             get
             {
-                var photo = Photo;
-                if (photo == null) photo = "picture.jpg";
+                var baseDir = Path.Combine(Environment.CurrentDirectory, "images");
+                string fileName = !string.IsNullOrEmpty(Photo) && File.Exists(Path.Combine(baseDir, Photo)) ? Photo : "picture.jpg";
+                return Path.Combine(baseDir, fileName);
             }
         }
     }
