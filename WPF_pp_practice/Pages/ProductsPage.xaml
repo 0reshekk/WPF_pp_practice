@@ -43,6 +43,7 @@
             </StackPanel>
             <Button
                 x:Name="MaterialsButton"
+                Click="MaterialsButton_Click"
                 Width="100"
                 Margin="5"
                 HorizontalAlignment="Right">

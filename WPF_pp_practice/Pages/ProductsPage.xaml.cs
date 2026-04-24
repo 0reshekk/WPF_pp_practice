@@ -142,5 +142,10 @@ namespace WPF_pp_practice.Pages
             NavigationService.Navigate(new ProductAddEditPage(null));
             Filter(null, null);
         }
+
+        private void MaterialsButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new MaterialsPage());
+        }
     }
 }

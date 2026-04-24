@@ -20,9 +20,15 @@ namespace WPF_pp_practice.Pages
     /// </summary>
     public partial class MaterialAddEditPage : Page
     {
-        public MaterialAddEditPage()
+        Materials _material = new Materials();
+        public MaterialAddEditPage(Materials material)
         {
             InitializeComponent();
+
+            if(material is Materials)
+            {
+                _material = material;
+            }
         }
     }
 }

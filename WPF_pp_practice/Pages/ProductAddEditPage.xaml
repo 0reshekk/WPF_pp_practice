@@ -16,12 +16,13 @@
             Height="200"
             BorderBrush="Black"
             BorderThickness="3">
-            <Image />
+            <Image x:Name="PhotoImage" />
         </Border>
         <Button
             x:Name="SelectPhotoButton"
             Height="40"
-            Margin="10">
+            Margin="10"
+            Click="SelectPhotoButton_Click">
             Выбрать изображение
         </Button>
 
@@ -65,9 +66,9 @@
 
         <Button
             x:Name="SaveButton"
-            Click="SaveButton_Click"
             Height="40"
-            Margin="10">
+            Margin="10"
+            Click="SaveButton_Click">
             Сохранить
         </Button>
     </StackPanel>
