@@ -36,6 +36,7 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Name}" Header="Наименование" />
                 <DataGridTextColumn Binding="{Binding MinQBox}" Header="Мин. в упакове" />
+                <DataGridTextColumn Binding="{Binding MaterialTypes.Name}" Header="Тип материала" />
                 <DataGridTextColumn Binding="{Binding Edinici.Name}" Header="Единица" />
                 <DataGridTextColumn Binding="{Binding QSclad}" Header="Количество на складе" />
                 <DataGridTextColumn Binding="{Binding MinVozm}" Header="Мин. возможное" />

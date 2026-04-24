@@ -193,7 +193,6 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="docs\script.sql" />
     <AdditionalFiles Include="images\tire_0.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </AdditionalFiles>
@@ -392,6 +391,7 @@
     <AdditionalFiles Include="images\picture.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </AdditionalFiles>
+    <Content Include="docs\скрипт2.sql" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>

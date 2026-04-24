@@ -20,7 +20,7 @@
         <!--  Фильтры  -->
 
         <!--  Используем как header, не более, просто чтобы сверстать  -->
-        <StackPanel Orientation="Horizontal">
+        <Grid>
             <StackPanel x:Name="FiltersStackPanel" Orientation="Horizontal">
                 <TextBox
                     x:Name="SearchTextBox"
@@ -43,51 +43,72 @@
             </StackPanel>
             <Button
                 x:Name="MaterialsButton"
-                Click="MaterialsButton_Click"
-                Width="100"
+                Width="130"
                 Margin="5"
-                HorizontalAlignment="Right">
+                HorizontalAlignment="Right"
+                Click="MaterialsButton_Click">
                 Материалы
             </Button>
-        </StackPanel>
+        </Grid>
 
         <!--  Список  -->
         <ListView x:Name="ProductsListView" Grid.Row="1">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Grid Height="120">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="120" />
-                            <ColumnDefinition Width="500" />
-                            <ColumnDefinition Width="80" />
-                        </Grid.ColumnDefinitions>
+                    <Border
+                        Padding="15"
+                        Background="Transparent"
+                        BorderBrush="Black"
+                        BorderThickness="1">
+                        <Grid Height="80">
 
-                        <Image
-                            Grid.Column="0"
-                            Margin="10"
-                            Source="{Binding PhotoPath}" />
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="80" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="100" />
+                            </Grid.ColumnDefinitions>
 
-                        <StackPanel Grid.Column="1" Orientation="Vertical">
-                            <TextBlock>
+                            <Image
+                                Grid.Column="0"
+                                Margin="10"
+                                Source="{Binding PhotoPath}" />
+
+                            <StackPanel Grid.Column="1" Orientation="Vertical">
+                                <TextBlock FontSize="18">
+                                    <TextBlock.Text>
+                                        <MultiBinding StringFormat="{}{0} | {1}">
+                                            <Binding Path="ProductTypes.Name" />
+                                            <Binding Path="Name" />
+                                        </MultiBinding>
+                                    </TextBlock.Text>
+                                </TextBlock>
+                                <TextBlock Text="{Binding Article}" />
+                                <TextBlock>
+                                    <TextBlock.Text>
+                                        <Binding Path="StringMaterials" StringFormat="{}Материалы: {0}" />
+                                    </TextBlock.Text>
+                                </TextBlock>
+                            </StackPanel>
+
+                            <TextBlock Grid.Column="2">
                                 <TextBlock.Text>
-                                    <MultiBinding StringFormat="{}{0} | {1}">
-                                        <Binding Path="ProductTypes.Name" />
-                                        <Binding Path="Name" />
-                                    </MultiBinding>
+                                    <Binding Path="MinPrice" StringFormat="{}{0} руб." />
                                 </TextBlock.Text>
                             </TextBlock>
-                            <TextBlock Text="{Binding Article}" />
-                            <TextBlock>
-                                <TextBlock.Text>
-                                    <Binding Path="StringMaterials" StringFormat="{}Материалы: {0}" />
-                                </TextBlock.Text>
-                            </TextBlock>
-                        </StackPanel>
-
-                        <TextBlock Grid.Column="2" Text="{Binding MinPrice}" />
-                    </Grid>
+                        </Grid>
+                    </Border>
                 </DataTemplate>
             </ListView.ItemTemplate>
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding MinPriceMoreThan10k}" Value="True">
+                            <Setter Property="Background" Value="#BB5FCA" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </ListView.ItemContainerStyle>
         </ListView>
 
         <!--  Действия с продуктами  -->

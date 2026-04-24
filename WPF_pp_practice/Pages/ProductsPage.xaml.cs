@@ -22,6 +22,7 @@ namespace WPF_pp_practice.Pages
     /// </summary>
     public partial class ProductsPage : Page
     {
+        private Users _user = new Users();
         public ProductsPage(Users user)
         {
             InitializeComponent();
@@ -30,6 +31,9 @@ namespace WPF_pp_practice.Pages
 
             SetComboBoxItems(); 
             SetInterfaceVisibility(user?.RoleID);
+
+            if (user != null) _user = user;
+
             Filter(null, null);
         }
 
@@ -145,7 +149,7 @@ namespace WPF_pp_practice.Pages
 
         private void MaterialsButton_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new MaterialsPage());
+            NavigationService.Navigate(new MaterialsPage(_user));
         }
     }
 }

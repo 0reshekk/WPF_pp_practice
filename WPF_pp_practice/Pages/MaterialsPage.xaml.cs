@@ -21,10 +21,19 @@ namespace WPF_pp_practice.Pages
     /// </summary>
     public partial class MaterialsPage : Page
     {
-        public MaterialsPage()
+        public MaterialsPage(Users user)
         {
             InitializeComponent();
             ResetDataGridItems();
+            SetInterfaceVisibility(user);
+        }
+
+        private void SetInterfaceVisibility(Users user)
+        {
+            if (user.RoleID != 1)
+            {
+                ManagmentStackPanel.Visibility = Visibility.Collapsed;
+            }
         }
 
         private void ResetDataGridItems()

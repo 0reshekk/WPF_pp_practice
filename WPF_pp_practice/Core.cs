@@ -26,11 +26,19 @@ namespace WPF_pp_practice
         {
             get
             {
-                var list = ProductsMaterials.Select(p => p.Materials.Name).ToList();
+                // Проверяем сперва есть ли связь
+                var list = ProductsMaterials.Select(p => p.Materials?.Name).ToList();
                 return string.Join(", ", list);
             }
         }
 
+        public bool MinPriceMoreThan10k
+        {
+            get
+            {
+                return MinPrice > 10000;
+            }
+        }
         public string PhotoPath
         {
             get
